@@ -1,4 +1,4 @@
-# запуск мелкой модели без zero
+# запуск мелкой модели на fsdp
 CUDA_VISIBLE_DEVICES=0,1 \
 python -m torch.distributed.launch \
     --nproc_per_node=2 \
