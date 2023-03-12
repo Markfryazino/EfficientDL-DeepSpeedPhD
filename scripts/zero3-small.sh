@@ -1,11 +1,11 @@
-# запуск мелкой модели с zero-2
+# запуск мелкой модели с zero-3
 deepspeed \
     --include localhost:2,3 \
     --master_port 29501 \
     run.py \
-    --deepspeed deepspeed/zero2.json \
+    --deepspeed deepspeed/zero3.json \
     --model_name bigscience/bloom-560m \
-    --wandb_run_name zero2-small \
+    --wandb_run_name zero3-small \
     --fp16 \
     --num_train_epochs 1 \
     --do_train \
@@ -25,9 +25,9 @@ deepspeed \
     --include localhost:2,3 \
     --master_port 29501 \
     run.py \
-    --deepspeed deepspeed/zero2-offload-model.json \
+    --deepspeed deepspeed/zero3-offload-model.json \
     --model_name bigscience/bloom-560m \
-    --wandb_run_name zero2-small-offload-model \
+    --wandb_run_name zero3-small-offload-model \
     --fp16 \
     --num_train_epochs 1 \
     --do_train \
@@ -47,9 +47,9 @@ deepspeed \
     --include localhost:2,3 \
     --master_port 29501 \
     run.py \
-    --deepspeed deepspeed/zero2-offload-opt.json \
+    --deepspeed deepspeed/zero3-offload-opt.json \
     --model_name bigscience/bloom-560m \
-    --wandb_run_name zero2-small-offload-opt \
+    --wandb_run_name zero3-small-offload-opt \
     --fp16 \
     --num_train_epochs 1 \
     --do_train \
@@ -69,9 +69,9 @@ deepspeed \
     --include localhost:2,3 \
     --master_port 29501 \
     run.py \
-    --deepspeed deepspeed/zero2-offload.json \
+    --deepspeed deepspeed/zero3-offload.json \
     --model_name bigscience/bloom-560m \
-    --wandb_run_name zero2-small-offload-all \
+    --wandb_run_name zero3-small-offload-all \
     --fp16 \
     --num_train_epochs 1 \
     --do_train \

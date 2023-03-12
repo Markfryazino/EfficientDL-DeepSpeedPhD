@@ -54,7 +54,7 @@ def main():
     if os.getenv("RANK") == "0":
         wandb.init(
             entity="broccoliman",
-            project="efficient_dl_deepspeed",
+            project="efficient_dl_deepspeed_phd",
             name=aux_args.wandb_run_name
         )
 

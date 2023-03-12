@@ -1,6 +1,6 @@
 # запуск мелкой модели без zero
 deepspeed \
-    --include localhost:0,1 \
+    --include localhost:2,3 \
     --master_port 29501 \
     run.py \
     --deepspeed deepspeed/basic.json \
@@ -18,4 +18,5 @@ deepspeed \
     --per_device_eval_batch_size 64 \
     --learning_rate 2e-5 \
     --seed 42 \
-    --output_dir ./log
+    --output_dir ./log \
+    --max_examples 512
